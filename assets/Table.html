@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/table.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+  </style>
+</head>
+<body>
+  <!-- <table border="1" cellpadding="10" cellspacing="10"> -->
+  <table border="1" height="400px" width="70%" align="center" style="text-align: center;">
+    <tbody><tr>
+    <th>Sno</th>
+    <th>Name</th>
+    <th>Contact No</th>
+    <th>Place</th>
+    <th>Booked Car</th>
+    <th>Varient</th>
+    <th>Date</th>
+    <th>Expected Date</th>
+    <th>Mode of Payment</th>
+    <th>Status</th>
+    </tr>
+
+    <tr>
+    <td>1</td>
+    <td>Vivek</td>
+    <td>123124325</td>
+    <td>Gwalior</td>
+    <td>Wagon</td>
+    <td>lxian</td>
+    <td>12/4/25</td>
+    <td>12/5/25</td>
+    <td>Cash</td>
+    <td>Pending</td>
+    </tr>
+    
+    <tr>
+    <td>2</td>
+    <td>sreya</td>
+    <td>09348957</td>
+    <td>Susuki</td>
+    <td>altio</td>
+    <td>imal</td>
+    <td>15/5/25</td>
+    <td>15/5/25</td>
+    <td>check</td>
+    <td>Delivered</td>
+    </tr>
+  </tbody></table>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
